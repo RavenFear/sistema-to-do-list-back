@@ -1,10 +1,7 @@
 package com.sistematodolist.sistema_to_do_list.entities;
 
 import com.sistematodolist.sistema_to_do_list.enums.TaskStatus;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -45,6 +42,7 @@ public class Task {
     /**
      * Descripción detallada de la tarea.
      */
+    @Column(columnDefinition="TEXT")
     private String descripcion;
 
     /**
